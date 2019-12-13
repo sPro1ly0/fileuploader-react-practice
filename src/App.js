@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {Component} from 'react';
+import './App.css';
+import SearchBar from './SearchBar/SearchBar';
+import FilterableList from './FilterableList/FilterableList';
 
-function App() {
-  return (
-    <main className='App'>
-      {/* content goes here */}
-    </main>
-  );
+//pass files prop along to FilterableList
+class App extends Component {
+  render() {
+    return (
+      <div className='App'>
+        <SearchBar />
+        <FilterableList files={this.props.files} />
+      </div>
+    );
+  }
 }
 
 export default App;
