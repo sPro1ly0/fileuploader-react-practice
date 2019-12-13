@@ -7,25 +7,47 @@ class FilterOptions extends Component {
             <div className="FilterOptions">
                 <div className="FilterOptions__option">
                     <label htmlFor="filter_all">
-                        <input type="radio" checked={filterOption === "All"} value="All" id="filter_all" name="filter"/>
+                        <input 
+                            type="radio" 
+                            checked={this.props.filterOption === "All"} 
+                            value="All" 
+                            id="filter_all" 
+                            name="filter"
+                            onChange={e => this.props.handleFilterChange(e.target.value)}/>
                         All
                     </label>
                 </div>
                 <div className="FilterOptions__option">
                     <label htmlFor="filter_uploaded">
-                        <input type="radio" checked={filterOption === "Uploaded"}value="Uploaded" id="filter_uploaded" name="filter"/>
+                        <input 
+                            type="radio" 
+                            checked={this.props.filterOption === "Uploaded"}
+                            value="Uploaded" id="filter_uploaded" 
+                            name="filter"
+                            onChange={e => this.props.handleFilterChange(e.target.value)}/>
                         Uploaded
                     </label>
                 </div>
                 <div className="FilterOptions__option">
                     <label htmlFor="filter_synced">
-                        <input type="radio" checked={filterOption === "Synced"} value="Synced" id="filter_synced" name="filter"/>
+                        <input 
+                            type="radio" 
+                            checked={this.props.filterOption === "Synced"} 
+                            value="Synced" id="filter_synced" 
+                            name="filter"
+                            onChange={e => this.props.handleFilterChange(e.target.value)}/>
                         Synced
                     </label>
                 </div>
                 <div className="FilterOptions__option">
                     <label htmlFor="filter_new">
-                        <input type="radio" checked={filterOption === "New"} value="New" id="filter_new" name="filter"/>
+                        <input 
+                            type="radio" 
+                            checked={this.props.filterOption === "New"} 
+                            value="New" 
+                            id="filter_new" 
+                            name="filter"
+                            onChange={e => this.props.handleFilterChange(e.target.value)}/>
                         New
                     </label>
                 </div>

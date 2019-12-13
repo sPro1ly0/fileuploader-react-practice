@@ -12,12 +12,28 @@ class App extends Component {
       filterOption: 'All'
     };
   }
+
+  updateSearchTerm(term) {
+    this.setState({
+      searchTerm: term
+    })
+  }
+
+  updateFilterOption(option) {
+    this.setState({
+      filterOption: option
+    })
+  }
+
   render() {
     return (
       <div className='App'>
         <SearchBar 
           searchTerm={this.state.searchTerm} 
-          filterOption={this.state.filterOption}/>
+          filterOption={this.state.filterOption}
+          handleUpdate={term => this.updateSearchTerm(term)}
+          handleFilterChange={option => this.updateFilterOption(option)}/>
+          
         <FilterableList 
           files={this.props.files}
           searchTerm={this.state.searchTerm} 
